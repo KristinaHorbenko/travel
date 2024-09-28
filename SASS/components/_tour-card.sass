@@ -1,0 +1,192 @@
+.tour-cards
+    height: 50rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    //@include respond (tab-port)
+    @media only screen and (max-width: 900px), (hover:none)
+        margin-bottom: 2rem
+        height: auto
+    &__side
+        height: 50rem
+        transition: .7s all ease-out
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        overflow: hidden
+        //@include respond (tab-port)
+        @media only screen and (max-width: 900px), (hover:none)
+            height: auto
+            position: relative
+        &_front
+            //@include respond (tab-port)
+            @media only screen and (max-width: 900px), (hover:none)
+                padding-bottom: 11rem
+        &_back
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
+            transform: rotateY(180deg)
+            //backface-visibility: hidden
+            //@include respond (tab-port)
+            @media only screen and (max-width: 900px), (hover:none)
+                transform: rotateY(0)
+                padding: 5rem
+                padding-top: 12rem
+                margin-top: -10rem
+                clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+                
+
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+        @include respond (tab-port)
+            transform: rotateY(0)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+
+    
+    &__img
+        background-blend-mode: hard-light //налаживает фильтр на фото как в фотошопе
+        //width: 34.1rem
+        height: 24.5rem
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
+
+        &_1
+            background: $color-brown-light url(../img/card-1.jpg) center / cover no-repeat
+        &_2
+            background: $color-brown-light url(../img/card-2.jpg) center / cover no-repeat
+        &_3
+            background: $color-brown-light url(../img/card-3.jpg) center / cover no-repeat
+        //@include respond (tab-port)
+        @media only screen and (max-width: 900px), (hover:none)
+           
+    &__tittel
+        font-weight: 300
+        font-size: 2.8rem
+        text-align: right
+        letter-spacing: .2rem
+        text-transform: uppercase
+        color: #FFFFFF
+        position: absolute
+        text-align: right
+        top: 17rem
+        right: 0rem
+        padding: 2rem, 2rem
+        @include respond (tab-land)
+            font-size: 2.2rem
+            top: 22rem
+        @include respond (tab-port)
+            font-size: 2.4rem
+            top: 21rem
+      
+   
+
+        // @include respond (tab-port)
+        //     top: 27rem
+        //     font-size: 3.6rem
+           
+           
+    &__span //Это свойство применяеться для того что бы виделялить текст как маркером, грандиентом  
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+        padding: 1rem 2rem 1rem 1rem
+        &_2
+            position: absolute
+            top: 3.2rem
+            right: 0
+            padding-bottom: 1rem
+            padding-top: 0rem
+            @include respond (tab-land)
+                top: 2.8rem
+            @include respond (tab-port)
+                top: 3rem
+            @include respond (phone)
+                top: 3.1rem
+        
+
+            
+           
+    &__described
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 75%
+            text-align: center
+                
+            li
+                font-size: $font-size-paragraph
+                letter-spacing: .2rem
+                color: #777777
+                
+                @include respond (tab-land)
+                    font-size: 1.2rem
+                @include respond (tab-port)
+                    font-size: 2.2rem
+
+    &__side_back-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) //выровнивает текст 
+        @include respond (tab-port)
+            position: relative
+            top: 0%
+            left: 0%
+            transform: translate(0%, 0%) //выровнивает текст 
+            text-align: center
+    
+
+    &__text
+        margin-bottom: 8rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        color: $color-white
+        @include respond (tab-port)
+            margin-bottom: 4rem
+        &_1
+            font-size: $font-size-paragraph
+            font-weight: 300
+        
+        
+            
+        &_2
+            font-size: 6rem
+            font-weight: 500
+            @include respond (tab-land)
+                font-size: 5rem
+        
+
+    
+
+// .title-back
+//     font-weight: 300
+//     font-size: 16px
+//     letter-spacing: .2rem
+//     text-transform: uppercase
+//     color: white
+
+// .price-back
+//     font-weight: 400
+//     font-size: 6rem
+//     letter-spacing: .2rem
+//     text-transform: uppercase
+//     color: white
+
+                 
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

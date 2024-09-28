@@ -1,0 +1,48 @@
+.footer
+    padding: 8rem
+    background: #333333
+    &__logo
+        width: 12rem
+    &__list
+        list-style: none
+        text-align: center
+    &__item
+        display: inline-block
+        margin-bottom: 2rem
+        &:not(:last-child)
+            margin-right: 5rem
+        @include respond (tab-land)
+            &:not(:last-child)
+                margin-right: 2rem
+        @include respond (phone)
+            display: block
+    &__link
+        &:link, &:visited
+            font-family: 'Inter'
+            text-decoration: none
+            font-size: $font-size-paragraph
+            font-weight: 300
+            letter-spacing: .2rem
+            text-transform: uppercase
+            color: $color-gray
+            display: inline-block
+            @include respond (tab-port)
+                &:not(:last-child)
+                    margin-bottom: 1rem
+                    font-size: 2rem
+        &:hover
+            color: $color-brown-dark
+        @include respond (tab-land)
+            font-size: 1.4rem
+   
+      
+
+
+     
+    
+
+
+
+ 
+
+    
